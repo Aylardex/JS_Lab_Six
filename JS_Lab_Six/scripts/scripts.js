@@ -30,12 +30,12 @@ let duration = 0;
 function recalculate() {
     let costLabel = document.getElementById("calculated-cost");
     if (modelName == "XYZ") {
-        totalCost = (duration * 100).toFixed(2);
-        costLabel.innerHTML = totalCost
+        let totalCost = (duration * 100).toFixed(2);
+        costLabel.innerHTML = totalCost;
     }
     else if (modelName == "CPRG") {
-        totalCost = (duration * 213).toFixed(2);
-        costLabel.innerHTML = totalCost
+        let totalCost = (duration * 213).toFixed(2);
+        costLabel.innerHTML = totalCost;
     }
 }
 
@@ -89,7 +89,7 @@ function changeDuration() {
     let duratext = document.getElementById("duration-text");
     let duranum = prompt("Please enter a new duration:");
     duratext.innerHTML = duranum;
-    duration = parseInt(duranum)
+    duration = parseInt(duranum);
     recalculate();
 }
 
